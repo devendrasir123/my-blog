@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVENDRA'S BLOG</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: auto;
+            overflow: hidden;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            width: 120px; /* Adjust size as needed */
+            height: 120px; /* Adjust size as needed */
+            border-radius: 50%; /* Circular image */
+            object-fit: cover; /* To prevent stretching */
+            margin-right: 20px;
+            border: 3px solid #ddd;
+        }
+
+        .header-text {
+            flex-grow: 1;
+        }
+
+        h1.colorful-title {
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
+            background-color: #2c3e50; /* Contrasting background for title */
+            color: #fff; /* Fallback text color if JS fails */
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block; /* To make background fit content */
+        }
+        /* Spans inside h1 will be styled by JS */
+        h1.colorful-title span {
+            display: inline-block; /* Allows letter spacing if needed */
+        }
+
+        h2.subtitle {
+            font-size: 1.2em;
+            color: #555;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        nav ul {
+            list-style: none;
+            background: #333;
+            text-align: center;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            background-color: #555;
+        }
+
+        .content-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+        }
+
+        .content-section h3 {
+            color: #333;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .content-section ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        .content-section ul li {
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header img {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            h1.colorful-title {
+                font-size: 2em;
+            }
+            h2.subtitle {
+                font-size: 1em;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1.colorful-title {
+                font-size: 1.8em;
+                padding: 8px 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+            header img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://via.placeholder.com/150/3498db/ffffff?text=Your+Photo" alt="Devendra's Photo">
+            <!-- Replace with your actual photo URL -->
+            <div class="header-text">
+                <h1 class="colorful-title" id="mainTitle">DEVENDRA'S BLOG</h1>
+                <h2 class="subtitle">an educational resources for student</h2>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="event.preventDefault(); alert('Home page (same tab for demo)');">Home</a></li>
+                <li><a href="#about" target="_blank">About Us</a></li>
+                <li><a href="#notes" target="_blank">Notes</a></li>
+                <li><a href="#quiz" target="_blank">Quiz</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="home-content" class="content-section">
+                <h3>Welcome!</h3>
+                <p>This is the main landing page for Devendra's Blog. Explore the resources using the links above.</p>
+            </section>
+
+            <section id="notes-content" class="content-section">
+                <h3>Notes</h3>
+                <ul>
+                    <li>Grade 10</li>
+                    <li>Grade 9</li>
+                    <li>Grade 8</li>
+                </ul>
+            </section>
+
+            <section id="quiz-content" class="content-section">
+                <h3>Quiz</h3>
+                <ul>
+                    <li>Grade 5</li>
+                    <li>Grade 6</li>
+                    <li>Grade 7</li>
+                    <li>Grade 8</li>
+                    <li>Grade 9</li>
+                    <li>Grade 10</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>© <span id="currentYear"></span> Devendra's Blog. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript for colorful title and current year
+        document.addEventListener('DOMContentLoaded', function() {
+            // Colorful Title
+            const titleElement = document.getElementById('mainTitle');
+            const titleText = titleElement.innerText;
+            const colors = ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f', '#9b59b6', '#1abc9c', '#e67e22', '#d35400'];
+            let newTitleHTML = '';
+            for (let i = 0; i < titleText.length; i++) {
+                if (titleText[i] === ' ') { // Keep spaces as spaces
+                    newTitleHTML += ' ';
+                } else {
+                    newTitleHTML += `<span style="color: ${colors[i % colors.length]};">${titleText[i]}</span>`;
+                }
+            }
+            titleElement.innerHTML = newTitleHTML;
+
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // Smooth scroll for internal links (Home button example)
+            // For the real Home button, it should link to the main page or refresh.
+            // The other links open in new tabs as requested.
+            // If you had other internal fragment links, you could add smooth scrolling:
+            /*
+            document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+                if (anchor.getAttribute('target') !== '_blank') { // Only for internal, non-new-tab links
+                    anchor.addEventListener('click', function (e) {
+                        if (this.getAttribute('href') === '#home') {
+                             // For a real single page app, you'd show/hide sections.
+                             // For this demo, it just prevents default.
+                            e.preventDefault();
+                            alert('Home clicked! Normally this would scroll or reload.');
+                        } else {
+                            // Example for other internal sections if they existed
+                            // e.preventDefault();
+                            // document.querySelector(this.getAttribute('href')).scrollIntoView({
+                            //     behavior: 'smooth'
+                            // });
+                        }
+                    });
+                }
+            });
+            */
+        });
+    </script>
+</body>
+</html>
